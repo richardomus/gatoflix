@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ib9-L0-Hx8">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="QTx-VG-v6J">
+            <objects>
+                <navigationController id="Ib9-L0-Hx8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="alW-h6-X8z">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7W6-9o-ARg" kind="relationship" relationship="rootViewController" id="4Nd-MK-XCK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eD7-4S-IhE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1066" y="-44"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="8do-pB-ATX">
+            <objects>
+                <viewController id="7W6-9o-ARg" customClass="HomeViewController" customModule="gatoflix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B6S-Kl-ffm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_big" translatesAutoresizingMaskIntoConstraints="NO" id="SPO-q8-O9L">
+                                <rect key="frame" x="76.666666666666686" y="306" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="F3b-vo-bGA"/>
+                                    <constraint firstAttribute="height" constant="240" id="mVg-Ui-xyk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kHY-5w-ATi"/>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="SPO-q8-O9L" firstAttribute="centerX" secondItem="B6S-Kl-ffm" secondAttribute="centerX" id="aGz-gX-m51"/>
+                            <constraint firstItem="SPO-q8-O9L" firstAttribute="centerY" secondItem="B6S-Kl-ffm" secondAttribute="centerY" id="orB-b0-SMi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zNk-qe-6Lp"/>
+                    <connections>
+                        <outlet property="heightConstraint" destination="mVg-Ui-xyk" id="4cR-9G-6g3"/>
+                        <outlet property="logo" destination="SPO-q8-O9L" id="5hP-Gb-Jxf"/>
+                        <outlet property="widthConstraint" destination="F3b-vo-bGA" id="449-3q-pGl"/>
+                        <segue destination="hZE-Jc-rHi" kind="show" identifier="goToAccounts" id="EzW-OO-I2a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5L-8Q-Uvd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-239" y="-44"/>
+        </scene>
+        <!--Account View Controller-->
+        <scene sceneID="nap-Ii-Ggf">
+            <objects>
+                <viewController id="hZE-Jc-rHi" customClass="AccountViewController" customModule="gatoflix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hx3-GP-MDo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4pE-Nw-NWb">
+                                <rect key="frame" x="51.666666666666657" y="167" width="290" height="587"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="Svf-ao-f3P"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qJH-Dd-Lq5">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AccountCollectionViewCell" id="iKg-dK-BPQ" customClass="AccountCollectionViewCell" customModule="gatoflix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3em-ia-XtW">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESm-M1-9f9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyC-uF-l9Y">
+                                                            <rect key="frame" x="16" y="0.0" width="96" height="96"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQ6-S1-k4i">
+                                                            <rect key="frame" x="0.0" y="104" width="128" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="128" id="LpJ-jO-wvT"/>
+                                                                <constraint firstAttribute="height" constant="24" id="dUY-gI-oAH"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="wQ6-S1-k4i" firstAttribute="top" secondItem="iyC-uF-l9Y" secondAttribute="bottom" constant="8" id="CCz-kD-yjT"/>
+                                                        <constraint firstItem="iyC-uF-l9Y" firstAttribute="leading" secondItem="ESm-M1-9f9" secondAttribute="leading" constant="16" id="LYA-FY-xhK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iyC-uF-l9Y" secondAttribute="trailing" constant="16" id="Nz6-3m-IQX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="wQ6-S1-k4i" secondAttribute="bottom" id="Qxg-Hq-r49"/>
+                                                        <constraint firstItem="iyC-uF-l9Y" firstAttribute="top" secondItem="ESm-M1-9f9" secondAttribute="top" id="dhL-Nt-0EG"/>
+                                                        <constraint firstItem="wQ6-S1-k4i" firstAttribute="leading" secondItem="ESm-M1-9f9" secondAttribute="leading" id="hpt-SE-DLE"/>
+                                                        <constraint firstAttribute="trailing" secondItem="wQ6-S1-k4i" secondAttribute="trailing" id="qsj-Vc-9bM"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ESm-M1-9f9" firstAttribute="top" secondItem="3em-ia-XtW" secondAttribute="top" id="Ogm-v4-ZUx"/>
+                                                <constraint firstAttribute="trailing" secondItem="ESm-M1-9f9" secondAttribute="trailing" id="Pla-Fi-FfG"/>
+                                                <constraint firstAttribute="bottom" secondItem="ESm-M1-9f9" secondAttribute="bottom" id="aC4-5i-ENh"/>
+                                                <constraint firstItem="ESm-M1-9f9" firstAttribute="leading" secondItem="3em-ia-XtW" secondAttribute="leading" id="hOq-5o-a5e"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="boxView" destination="iyC-uF-l9Y" id="hLo-va-tET"/>
+                                            <outlet property="userNameLabel" destination="wQ6-S1-k4i" id="6Bj-Xd-le0"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="hZE-Jc-rHi" id="IJy-zh-Dpk"/>
+                                    <outlet property="delegate" destination="hZE-Jc-rHi" id="Gr9-tQ-0uG"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ViO-rK-V8C"/>
+                        <color key="backgroundColor" red="0.12935131790000001" green="0.12157290430000001" blue="0.1215684637" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="4pE-Nw-NWb" firstAttribute="centerX" secondItem="hx3-GP-MDo" secondAttribute="centerX" id="Brv-lB-aoW"/>
+                            <constraint firstItem="4pE-Nw-NWb" firstAttribute="top" secondItem="ViO-rK-V8C" secondAttribute="top" constant="64" id="QTZ-ic-rtb"/>
+                            <constraint firstItem="ViO-rK-V8C" firstAttribute="bottom" secondItem="4pE-Nw-NWb" secondAttribute="bottom" constant="64" id="it9-qc-p0W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GOa-2c-l5r"/>
+                    <connections>
+                        <outlet property="collectionView" destination="4pE-Nw-NWb" id="gmy-uS-E4j"/>
+                        <segue destination="9U6-1S-b63" kind="show" identifier="gotToLoggedHome" id="ydf-HO-RYk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQY-F6-DOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658.77862595419845" y="-44.366197183098592"/>
+        </scene>
+        <!--Logged Home View Controller-->
+        <scene sceneID="S1N-H3-Lcc">
+            <objects>
+                <viewController id="9U6-1S-b63" customClass="LoggedHomeViewController" customModule="gatoflix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xqA-3i-ROn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HrC-pr-DSU">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9U6-1S-b63" id="DuX-yz-BDB"/>
+                                    <outlet property="delegate" destination="9U6-1S-b63" id="p5w-KZ-Nej"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V2g-Gk-ahg"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="V2g-Gk-ahg" firstAttribute="trailing" secondItem="HrC-pr-DSU" secondAttribute="trailing" id="J9F-mE-Z6Q"/>
+                            <constraint firstItem="HrC-pr-DSU" firstAttribute="top" secondItem="V2g-Gk-ahg" secondAttribute="top" id="LK2-k1-71o"/>
+                            <constraint firstItem="HrC-pr-DSU" firstAttribute="leading" secondItem="V2g-Gk-ahg" secondAttribute="leading" id="dVv-Ce-Ocj"/>
+                            <constraint firstItem="V2g-Gk-ahg" firstAttribute="bottom" secondItem="HrC-pr-DSU" secondAttribute="bottom" id="nQZ-Qz-VWL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bUw-Su-Bet"/>
+                    <connections>
+                        <outlet property="tableView" destination="HrC-pr-DSU" id="x3Q-e3-dCe"/>
+                        <segue destination="dEk-I7-gKz" kind="show" identifier="movieSegue" id="prz-Zw-mJf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6h-t1-2Rk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606.8702290076335" y="-44.366197183098592"/>
+        </scene>
+        <!--Movie Preview View Controller-->
+        <scene sceneID="rl8-ef-0bB">
+            <objects>
+                <viewController id="dEk-I7-gKz" customClass="MoviePreviewViewController" customModule="gatoflix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B9y-2C-wKC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbe-Wt-pSV">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ybS-qE-aE8"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ybS-qE-aE8" firstAttribute="bottom" secondItem="gbe-Wt-pSV" secondAttribute="bottom" id="58L-S1-IgW"/>
+                            <constraint firstItem="ybS-qE-aE8" firstAttribute="bottom" secondItem="gbe-Wt-pSV" secondAttribute="bottom" id="RLe-hj-fmr"/>
+                            <constraint firstItem="gbe-Wt-pSV" firstAttribute="top" secondItem="ybS-qE-aE8" secondAttribute="top" id="f2Z-42-VCH"/>
+                            <constraint firstItem="gbe-Wt-pSV" firstAttribute="top" secondItem="ybS-qE-aE8" secondAttribute="top" id="huj-Zv-aCR"/>
+                            <constraint firstItem="ybS-qE-aE8" firstAttribute="trailing" secondItem="gbe-Wt-pSV" secondAttribute="trailing" id="s9J-JG-fuC"/>
+                            <constraint firstItem="gbe-Wt-pSV" firstAttribute="leading" secondItem="ybS-qE-aE8" secondAttribute="leading" id="vzq-AL-uCm"/>
+                            <constraint firstItem="ybS-qE-aE8" firstAttribute="trailing" secondItem="gbe-Wt-pSV" secondAttribute="trailing" id="x9S-Ic-CIT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2xb-aI-VsZ"/>
+                    <connections>
+                        <outlet property="webView" destination="gbe-Wt-pSV" id="a06-TL-nge"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBF-lO-v16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2560" y="-44"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_big" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
